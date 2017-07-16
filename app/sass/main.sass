@@ -1,0 +1,261 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+*::-webkit-input-placeholder
+	color: #123
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+
+body
+	font-size: $default-font-size
+	min-width: 320px
+	position: relative
+	line-height: 1.5
+	font-family: $default-font
+	overflow-x: hidden
+	opacity: 1
+//**************************************************
+
+// Обшая темя для кнопок
+.my_button
+	display: block
+	width: 190px
+	padding: 11px 32px
+	font-size: 15px
+	font-weight: bold
+	text-decoration: none
+	color: #fff
+	border-radius: 45px
+	background-color: $accent
+	&:hover, &:active, &:visited, &:link
+		text-decoration: none
+	&:hover
+		background-color: $red
+		color: #fff
+//*********************************************
+// общие настройки флекс контейнеров
+.flex-cont, .top-menu
+	display: flex
+	align-items: center
+	justify-content: space-between
+	flex-flow: row wrap
+	align-content: space-between
+	max-width: 976px
+	margin: auto
+//*****************************************
+//<!-- блок верхней строки с сылками -->
+.top-line
+	padding: 10px 0
+	border-bottom: #ddd 1px solid
+	ul
+		list-style-type: none
+		margin: 0
+		padding: 0
+		li
+			display: inline-block
+			&:nth-of-type(1n+2)
+				padding-left: 10px
+			a
+				color: $accent
+				&:hover
+					text-decoration: none
+					color: black
+	.social
+		text-align: right
+		p
+			margin: 0
+		.fa
+			margin: 0
+			padding: 0 0 0 10px
+			color: $accent
+			font-size: 16px
+			&:hover
+				color: $red
+//****************************************
+//<!-- блок с логотипом и контактами -->
+.flex-cont //настройки основных блоков секции
+	.flex-center1 //фиксируем размер блока с логотипом чтобы не распадался при сжатии
+			flex: 2 1 380px
+			//margin-left: auto
+	.flex-center
+		flex: 1 1 190px //фиксируем размер остальных блоков, чтобы не распадались при сжатии
+		//display: flex Это для смартфонов
+.header-contacts
+	margin-top: 20px
+	font-weight: bold
+	.logo
+		display: flex
+		align-items: center
+		.text_logo
+			margin: 0
+			margin-left: 10px
+.contacts //стилизуем блок с контактными данными
+	//margin: auto // Это для смартфонов
+	.city
+		font-size: 14px
+	.phone
+		span
+			font-size: 18px
+			&:first-child
+				color: $red
+			&:last-child
+				color: $grey
+	.maps a
+		color: $accent
+		font-weight: normal
+		text-decoration: underline
+		&:hover
+			text-decoration: none
+			color: black
+.call
+	//margin: auto // Это для смартфонов
+//*************************************************************
+//<!-- меню сайта -->
+.top-menu
+	margin-top: 20px
+	background-color: #f0f0f0
+	border-bottom: #d06368 4px solid
+	padding: 18px 0
+	.top-menu-item
+		flex: 1 1 130px
+		border-left: #ddd 1px solid
+		padding: 0 18px
+		font-weight: bold
+		a
+			text-transform: uppercase
+			border-bottom: #b4b4b4 1px solid
+			color: #000
+			&:hover, &:active, &:visited, &:link
+				text-decoration: none
+			&:hover
+				color: $red
+				border-bottom: none
+
+		&:first-child
+			border-left: none
+		&:nth-child(5)
+			flex: 2 1 23%
+		&:last-child
+			flex: 1 1 10%
+//*************************************************
+//***********Верхний слайдер******************
+.section-slidebar
+	width: 100%
+	//height: 300px
+	overflow: hidden
+	background-color: #2a2a2a
+	.carousel-top
+		//height: 300px
+		//position: absolute
+		.carousel-services-content
+			position: absolute
+			width: 100%
+			height: 100px
+			padding: 0
+			margin: 0
+			color: #fff
+			background-color: rgba(42,42,42,.5)
+			h2
+				position: absolute
+				font-size: 32px
+				margin-left: 25px
+				top: 0
+				bottom: 0
+			ul 
+				position: absolute
+				font-size: 15px
+				right: 50px
+				li
+					list-style-type: none
+					&:before
+						color: #76beff
+						content: '•'
+						padding-right: 5px
+						//font-size: 18px
+						font-weight: bolder
+				//li
+    			//list-style-type: none 
+			   	//&:before
+				//    color: #76beff 
+				 //   content: "2" 
+				 //   padding-right: 10px 
+		
+		.owl-nav
+			position: absolute
+			//top: 0
+			top: 50%
+			width: 100%
+			>div
+				position: absolute
+				&.owl-prev
+					left: 0
+					//top: 0
+					//bottom: 0
+				&.owl-next
+					right: 0
+
+.right-slide
+	background-image: url("../img/right-slide.png")
+		.carousel-services-image
+			//position: absolute
+//**********************************************
+//<!-- блок УТП под верхним слайдером -->
+.advantages
+	//position: absolute
+	width: 100%
+	background-color: $accent
+	color: #fff
+	padding: 20px 0
+	figure
+		display: flex
+		align-items: center
+		figcaption
+			padding-left: 10px
+			font-size: 16px
+			font-weight: bold
+.flex-right //добавить класс чтобы выровнять правый блок по правому краю
+	display: flex
+	margin-left: auto
+.flex-center-advantages
+	display: flex
+	// margin: auto если надо выровнять "мы обеспечиваем рост продаж по центру"
+//***************************************************
+//<!-- блок Эффективное продвижение сайта со вторым слайдером -->
+.effect-prod-site, .create-and-prod
+	h1
+		font-size: 37px
+		color: $accent
+	h2
+		color: $red
+		font-size: 20px
+	p
+		font-size: 15px
+	a
+		text-decoration: underline
+	h3
+		font-size: 15px
+		&:before
+			content: "-"
+//*************************************************
