@@ -42,10 +42,11 @@ body
 .my_button
 	display: block
 	width: 190px
-	padding: 11px 32px
+	padding: 10px 0 // 32px
 	font-size: 15px
 	font-weight: bold
 	text-decoration: none
+	text-align: center
 	color: #fff
 	border-radius: 45px
 	background-color: $accent
@@ -216,9 +217,7 @@ body
 				&.owl-next
 					right: 0
 
-.right-slide
-	background-image: url("../img/right-slide.png")
-		.carousel-services-image
+		//.carousel-services-image
 			//position: absolute
 //**********************************************
 //<!-- блок УТП под верхним слайдером -->
@@ -244,18 +243,83 @@ body
 //***************************************************
 //<!-- блок Эффективное продвижение сайта со вторым слайдером -->
 .effect-prod-site, .create-and-prod
+	font-size: 15px
 	h1
 		font-size: 37px
 		color: $accent
 	h2
 		color: $red
 		font-size: 20px
-	p
-		font-size: 15px
 	a
 		text-decoration: underline
-	h3
-		font-size: 15px
-		&:before
-			content: "-"
 //*************************************************
+//<!-- блок Создание и продвижение сайта -->
+.create-and-prod
+	width: 100%
+	background-color: #f0f0f0
+	dl
+		dt
+			font-weight: bold
+			&:before
+				content: '\2014'
+				font-weight: bold
+				margin-right: 10px
+		dd
+			margin-left: 23px
+			margin-bottom: 30px
+	.my_button
+		display: inline-block
+		background-color: $red
+		margin-left: 16px
+	strong
+		display: inline-block
+		margin-left: 15px
+//<!-- Мы предоставляем следующие услуги -->
+.uslugi
+	
+	background: #4b6a8a url('../img/uslugi-bg.png') center no-repeat
+	h2
+		text-align: center
+	.uslugi-item
+		background-color: #FFF
+		//padding: 20px
+		font-size: 14px
+		.header
+			//padding-top: 15px
+			font-size: 20px
+			font-weight: bold
+			text-decoration: underline
+			background-image: url("../img/uslugi-1.png")
+			background-position: right center
+			background-repeat: no-repeat
+			padding: 30px 20px 10px 20px
+			margin-right: 15px
+		p
+			padding: 0 20px 20px 20px
+		.uslugi-price
+			border-top: 2px solid #4b6a8a
+			display: flex
+			align-items: center
+			justify-content: space-between
+			padding: 20px 0
+			&:before, &:after
+				//position: relative
+				content: '\25D1'
+				color: #4b6a8a
+				font-size: 30px
+				margin: -12px
+			&:after
+				content: '\25D0'
+		.cena
+			font-size: 20px
+			font-weight: bold
+			color: #4b6a8a
+		.my_button
+			width: 130px
+			font-size: 15px
+			background-color: #FFF
+			color: #000
+			border: 3px solid $red
+//***************************************
+		
+			
