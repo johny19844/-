@@ -32,7 +32,7 @@ body
 	font-size: $default-font-size
 	min-width: 320px
 	position: relative
-	line-height: 1.5
+	line-height: 1.4
 	font-family: $default-font
 	overflow-x: hidden
 	opacity: 1
@@ -253,6 +253,20 @@ body
 	a
 		text-decoration: underline
 //*************************************************
+//<!-- второй слайдер -->
+.carousel-two
+	.carousel-services-item
+		display: flex
+		align-items: center
+		justify-content: space-around
+		.carousel-services-image
+			display: inline-block
+		.carousel-services-content
+			display: inline-block
+			table tr td 
+				padding: 5px
+				margin: 0 10px 0 10px
+//**********************************
 //<!-- блок Создание и продвижение сайта -->
 .create-and-prod
 	width: 100%
@@ -271,19 +285,41 @@ body
 		display: inline-block
 		background-color: $red
 		margin-left: 16px
+		&:hover
+			opacity: .8
 	strong
 		display: inline-block
 		margin-left: 15px
 //<!-- Мы предоставляем следующие услуги -->
+.uslugi .col-md-4:nth-child(2) .uslugi-item
+	.header
+		background-image: url("../img/uslugi-2.png")
+.uslugi .col-md-4:nth-child(3) .uslugi-item
+	.header
+		background-image: url("../img/uslugi-3.png")
+.uslugi .col-md-4:nth-child(4) .uslugi-item
+	.header
+		background-image: url("../img/uslugi-4.png")
+.uslugi .col-md-4:nth-child(5) .uslugi-item
+	.header
+		background-image: url("../img/uslugi-5.png")
+.uslugi .col-md-4:nth-child(6) .uslugi-item
+	.header
+		background-image: url("../img/uslugi-6.png")
 .uslugi
-	
+	width: 100%
 	background: #4b6a8a url('../img/uslugi-bg.png') center no-repeat
 	h2
 		text-align: center
+		color: #fff
+		padding: 20px 0 10px 0
+		margin: 0
+		font-size: 24px
 	.uslugi-item
 		background-color: #FFF
-		//padding: 20px
+		margin: 10px 0
 		font-size: 14px
+		//height: 360px
 		.header
 			//padding-top: 15px
 			font-size: 20px
@@ -321,5 +357,60 @@ body
 			color: #000
 			border: 3px solid $red
 //***************************************
+//<!-- Преимущества раскрутки сайтов и сотрудничеств с SEO Update-->
+.preimushestvo
+	width: 100%
+	background-color: #f0f0f0
+	
+	h2
+		text-align: center
+		color: #545557
+		padding: 20px 0 40px 0
+		margin: 0
+		font-size: 24px
+	.preimushestvo-item
+		background-color: #566a88
+		text-align: center
+		margin: 25px 0
+		height: 340px
+		.number
+			//display: inline-block
+			position: absolute
+			width: 60px
+			height: 60px
+			color: #566a88
+			background-color: #FFF 
+			border-radius: 50%
+			font-size: 40px
+			font-weight: bold
+			left: 40%
+			top: -5px
+		.header
+			color: #74d7f0
+			font-size: 15px
+			font-weight: bold
+			text-transform: uppercase
+			padding: 50px 30px 0 30px
+		.tire
+			//display: inline
+			color: #fff
+			font-size: 50px
+			//margin: 0
+			margin-top: -25px	
+		p
+			line-height: 1.8
+			color: #fff
+			padding: 0 30px 30px 30px
+			margin-top: -20px
 		
-			
+//*************************************************	
+//<!-- меню футера -->
+.footer
+	width: 100%
+	background-color: #2a2a2a	
+	.top-menu
+		background-color: #2a2a2a
+		border-bottom: none
+		
+		a
+			color: #fff

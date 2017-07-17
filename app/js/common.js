@@ -3,12 +3,12 @@ $(function() {
 	// 	arrowLeftClass: 'slider-arrow--left'
 	// });
 
-	$('.carousel-top').owlCarousel({
+	$('.owl-carousel').owlCarousel({
 		loop: true,
 		smartSpeed: 700,
 		responsiveClass: true,
 		nav: true,
-		navText: ['prev','<i class="right-slide"></i>'],
+		navText: ['prev','next'],
 		responsive: {
 			0:{
 				items: 1
