@@ -37,7 +37,8 @@ body
 	overflow-x: hidden
 	opacity: 1
 //**************************************************
-
+.container
+	padding: 0
 // Обшая темя для кнопок
 .my_button
 	display: block
@@ -63,13 +64,14 @@ body
 	justify-content: space-between
 	flex-flow: row wrap
 	align-content: space-between
-	max-width: 976px
+	//max-width: 976px
 	margin: auto
 //*****************************************
 //<!-- блок верхней строки с сылками -->
 .top-line
 	padding: 10px 0
 	border-bottom: #ddd 1px solid
+	//max-width: 100%
 	ul
 		list-style-type: none
 		margin: 0
@@ -99,12 +101,12 @@ body
 .flex-cont //настройки основных блоков секции
 	.flex-center1 //фиксируем размер блока с логотипом чтобы не распадался при сжатии
 			flex: 0 0 auto
-			padding: 0 10px
+			padding: 0
 			//margin-left: auto
 	.flex-center
 		flex: 0 0 auto //фиксируем размер остальных блоков, чтобы не распадались при сжатии
-		padding: 0 10px
-		//display: flex Это для смартфонов
+		padding: 0
+		//display: flex //Это для смартфонов
 .header-contacts
 	margin-top: 20px
 	font-weight: bold
@@ -138,32 +140,67 @@ body
 	//margin: auto // Это для смартфонов
 //*************************************************************
 //<!-- меню сайта -->
-.top-menu
-	margin-top: 20px
-	background-color: #f0f0f0
+//savbar
+	//max-width: 976px
+.navbar
+	margin: 20px 0 0 0
+	border: none
 	border-bottom: #d06368 4px solid
-	padding: 18px 0
-	.top-menu-item
-		flex: 1 1 130px
-		border-left: #ddd 1px solid
-		padding: 0 18px
+	background-color: #f0f0f0
+	border-radius: 0
+	.navbar-collapse
+		padding: 0
+.navbar-default .navbar-nav > li > a
+	padding: 18px
+	span
+		color: #000
+		font-size: 12px
 		font-weight: bold
-		a
-			text-transform: uppercase
-			border-bottom: #b4b4b4 1px solid
-			color: #000
-			&:hover, &:active, &:visited, &:link
-				text-decoration: none
-			&:hover
-				color: $red
-				border-bottom: none
+		text-transform: uppercase
+		text-decoration: none
+		border-bottom: #b4b4b4 1px solid
+		//padding: 18px
+		&:hover
+			color: $red
+			border-bottom: none
+//.top-menu
 
-		&:first-child
-			border-left: none
-		&:nth-child(5)
-			flex: 2 1 23%
-		&:last-child
-			flex: 1 1 10%
+//.navbar-default .navbar-collapse, .navbar-default .navbar-form
+	//margin-top: 20px
+	//background-color: #f0f0f0
+	//border-bottom: #d06368 4px solid
+	//adding: 0
+	//margin: 0
+	//margin-top: 20px
+	//width: 
+	//li
+		//flex: 1 1 130px
+		//border-left: #ddd 1px solid
+	//	padding: 18px
+		//font-weight: bold
+		//a
+		//	text-decoration: none
+		//	display: block
+		//	span
+				//font-size: 12px
+				//font-weight: bold
+				//text-transform: uppercase
+				//text-decoration: none
+				//border-bottom: #b4b4b4 1px solid
+				//color: #000
+				//padding: 0
+				//&:hover, &:active, &:visited, &:link
+			//		text-decoration: none
+			//	&:hover
+			//		color: $red
+			//		border-bottom: none
+
+		//&:first-child
+			//border-left: none
+		//&:nth-child(5)
+			//flex: 2 1 23%
+	//	&:last-child
+			//flex: 1 1 10%
 //*************************************************
 //***********Верхний слайдер******************
 .section-slidebar
@@ -171,9 +208,10 @@ body
 	//height: 300px
 	overflow: hidden
 	background-color: #2a2a2a
-	background: url("../img/bg-slider-left.png") left center repeat, url("../img/bg-slider-right.png.png") center center repeat
-	div[class^="col-"]
-		padding: 0
+	background: url("../img/bg-slider.jpg") left center no-repeat
+	//opacity: .4
+	//div[class^="col-"]
+	//	padding: 0
 	.slide
 		//height: 300px
 		position: relative
@@ -185,14 +223,15 @@ body
 			flex: 0 0 auto
 			position: absolute
 			width: 100%
-			height: 100px
-			//padding: 0
+			//height: 100px
+			padding: 20px 0
 			//margin: 0
 			color: #fff
 			background-color: rgba(42,42,42,.5)
+			max-height: 100%
 			h2
 				//position: inline
-
+				margin: 0
 				font-size: 32px
 				//padding-left: 15px
 				//top: 0
@@ -201,6 +240,8 @@ body
 				//position: inline
 				font-size: 15px
 				//padding: 100px
+				//padding: 0
+				margin: 0
 				li
 					list-style-type: none
 					&:before
@@ -475,3 +516,5 @@ body
 			color: #fff
 			&:hover
 				color: #74d7f0
+
+@import "media" // Всегда в конце
