@@ -28,7 +28,7 @@ gulp.task('common-js', function() {
 gulp.task('js', ['common-js'], function() {
 	return gulp.src([
 		'app/libs/jquery/dist/jquery.min.js',
-		'app/libs/bootstrap-3.3.7-dist/js/bootstrap.min.js',
+		'app/libs/bootstrap/js/bootstrap.min.js',
 		'app/libs/bootstrap-autohidingnavbar-master/dist/jquery.bootstrap-autohidingnavbar.min.js',
 	//	'app/libs/OwlCarousel2-2.2.1/dist/owl.carousel.min.js',
 		'app/libs/glide/jquery.glide.min.js',
