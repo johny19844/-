@@ -8066,50 +8066,37 @@ body {
   height: 324px;
   overflow: hidden;
   background-color: #2a2a2a;
-  background: url("../img/slider-bg.png") no-repeat; }
-  .section-slidebar .slide {
-    position: relative; }
-    .section-slidebar .slide .fone {
-      position: absolute;
-      top: 0;
-      left: 0;
-      background: url("../img/shade.png") center no-repeat;
-      z-index: 98; }
-    .section-slidebar .slide .carousel-services-content {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-align: center;
-      -webkit-align-items: center;
-          -ms-flex-align: center;
-              align-items: center;
-      -webkit-justify-content: space-around;
-          -ms-flex-pack: distribute;
-              justify-content: space-around;
-      -webkit-box-flex: 0;
-      -webkit-flex: 0 0 auto;
-          -ms-flex: 0 0 auto;
-              flex: 0 0 auto;
-      position: absolute;
-      width: 100%;
-      padding: 20px 0;
-      color: #fff;
-      background-color: rgba(42, 42, 42, 0.5);
-      max-height: 100%; }
-      .section-slidebar .slide .carousel-services-content h2 {
-        margin: 0;
-        font-size: 32px; }
-      .section-slidebar .slide .carousel-services-content ul {
-        font-size: 15px;
-        margin: 0; }
-        .section-slidebar .slide .carousel-services-content ul li {
-          list-style-type: none; }
-          .section-slidebar .slide .carousel-services-content ul li:before {
-            color: #76beff;
-            content: '•';
-            padding-right: 5px;
-            font-weight: bolder; }
+  background: url("../img/slider-bg.png") center center no-repeat;
+  z-index: 1; }
+  .section-slidebar .fone {
+    position: absolute;
+    height: auto;
+    top: 0;
+    left: 0;
+    background: url("../img/shade.png") center no-repeat;
+    z-index: 200;
+    opacity: .5;
+    width: 100%; }
+  .section-slidebar .carousel-services-content {
+    position: absolute;
+    width: 100%;
+    padding: 20px 0;
+    color: #fff;
+    background-color: rgba(42, 42, 42, 0.5);
+    max-height: 100%; }
+    .section-slidebar .carousel-services-content h2 {
+      margin: 0;
+      font-size: 32px; }
+    .section-slidebar .carousel-services-content ul {
+      font-size: 15px;
+      margin: 0; }
+      .section-slidebar .carousel-services-content ul li {
+        list-style-type: none; }
+        .section-slidebar .carousel-services-content ul li:before {
+          color: #76beff;
+          content: '•';
+          padding-right: 5px;
+          font-weight: bolder; }
 
 .slider-nav {
   bottom: 0;
@@ -8127,16 +8114,18 @@ body {
 .slider-arrow--right {
   height: 69px;
   width: 44px;
-  background: url("../img/right-slide.png") 0 0 no-repeat; }
+  background: url("../img/right-slide.png") 0 0 no-repeat;
+  opacity: .5; }
   .slider-arrow--right:hover {
-    opacity: .5; }
+    opacity: 1; }
 
 .slider-arrow--left {
   height: 69px;
   width: 44px;
-  background: url("../img/left-slide.png") 0 0 no-repeat; }
+  background: url("../img/left-slide.png") 0 0 no-repeat;
+  opacity: .5; }
   .slider-arrow--left:hover {
-    opacity: .5; }
+    opacity: 1; }
 
 .advantages {
   width: 100%;
