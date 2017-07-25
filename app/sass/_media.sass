@@ -49,7 +49,22 @@
 	.container-fluid>.navbar-collapse, .container-fluid>.navbar-header, .container>.navbar-collapse, .container>.navbar-header
 		margin-right: -15px
 		margin-left: -15px
-
+	.flex-cont
+		//display: flex
+		//align-items: center
+		//justify-content: space-between
+		//flex-flow: row wrap
+		//align-content: center
+		.flex-center
+			flex: 1 0 auto //фиксируем размер остальных блоков, чтобы не распадались при сжатии
+			margin-top: 10px
+			margin-right: 20px
+			//margin: auto
+			a
+				margin: auto
+		.flex-center1 
+			margin-right: 20px
+		//padding: 0
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
 	/**/
