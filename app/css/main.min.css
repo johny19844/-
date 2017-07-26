@@ -9011,7 +9011,8 @@ body {
   width: 100%;
   overflow: hidden;
   background-color: #2a2a2a;
-  background: url("../img/bg-slider.jpg") left center no-repeat; }
+  background: url("../img/slider-bg.png") center center no-repeat, url("../img/shade.png") center center no-repeat;
+  z-index: 199111; }
   .section-slidebar .slide {
     position: relative; }
     .section-slidebar .slide .carousel-services-content {
