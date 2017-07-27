@@ -10,60 +10,129 @@
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 991px)
 	/**/
-	.navbar-header 
-		float: none
-
-	.navbar-left,.navbar-right 
-		float: none !important
-
-	.navbar-toggle 
-		display: block
-
-	.navbar-collapse 
-		border-top: 1px solid transparent
-		box-shadow: inset 0 1px 0 rgba(255,255,255,0.1)
-
-	.navbar-fixed-top 
+	// .nav-bar
+	// 	width: 100%
+	// 	max-width: 100%
+	// 	overflow-x: hidden
+		//overflow-y: hidden
+	.container
+		width: 100%
+	.navbar-nav
+		margin: 0
+	.dropdown-menu
+		min-width: 0
+		padding: 0
 		top: 0
-		border-width: 0 0 1px
+		margin: 0
+		font-size: 12px
+		border: none
+		z-index: 0
+		text-align: center
+	
+		// text-align: right
+		// padding-right: 30%
+		// background-color: white
+	// .navbar-default .navbar-collapse, .navbar-default .navbar-form
+	// 	background-color: white
+	// 	text-align: right
+	// 	padding-right: 30%
+	.navbar-nav > li
 
-	.navbar-collapse.collapse 
-		display: none!important
+		//border-bottom: #b4b4b4 1px solid
+	.navbar-default .navbar-nav > li a:first-child span
+		border-bottom: none
 
-	.navbar-nav 
-		float: none!important
-		margin-top: 7.5px
+	.list-group
+		//border-bottom: 1px solid black
+	div.list-group.open
+		padding-left: 0
+		padding-right: 0
+		padding-bottom: 0
+	.navbar-nav > li > a:hover
+		text-decoration: none
+	.navbar-nav .open .dropdown-menu //Нижний уровеь меню
+		background-color: #f0f0f0
+		padding-left: 25%
+		margin-top: 15px
+		//position: absolute
+		li
+			//width: 100%
+			//background-color: #f0f0f0
+			text-align: left
+			//padding-left: 25%
+			border-bottom: none
+			margin: 0 0
+	.navbar-default .navbar-nav .open .dropdown-menu > li > a //Нижний уровеь меню
+		color: #2f5792
+		font-size: 16px
+		font-family: 'Arial'
+		padding: 10px
+		&:hover
+			color: $red
+			//padding-top: 0
+	.nav li .list-group //Верхний уровеь меню
+		//display: block
+		border-bottom: #b4b4b4 1px solid
+		//margin: 0
+		text-align: center
+		//padding-right: 30%
+		background-color: white
+		//margin-bottom: 15px
 
-	.navbar-nav>li 
-		float: none
-		text-align: center !important
+	// .navbar-header 
+	// 	float: none
 
-	.navbar-nav>li>a
-		padding-top: 10px
-		padding-bottom: 10px
+	// .navbar-left,.navbar-right 
+	// 	float: none !important
 
-	.collapse.in
-		display:block !important
-		text-align: center !important
+	// .navbar-toggle 
+	// 	display: block
 
-	.container-fluid>.navbar-collapse, .container-fluid>.navbar-header, .container>.navbar-collapse, .container>.navbar-header
-		margin-right: -15px
-		margin-left: -15px
-	.flex-cont
+	// .navbar-collapse 
+	// 	border-top: 1px solid transparent
+	// 	box-shadow: inset 0 1px 0 rgba(255,255,255,0.1)
+
+	// .navbar-fixed-top 
+	// 	top: 0
+	// 	border-width: 0 0 1px
+
+	// .navbar-collapse.collapse 
+	// 	display: none!important
+
+	// .navbar-nav 
+	// 	float: none!important
+	// 	margin-top: 7.5px
+
+	// .navbar-nav>li 
+	// 	float: none
+	// 	text-align: center !important
+
+	// .navbar-nav>li>a
+	// 	padding-top: 10px
+	// 	padding-bottom: 10px
+
+	// .collapse.in
+	// 	display:block !important
+	// 	text-align: center !important
+
+	// .container-fluid>.navbar-collapse, .container-fluid>.navbar-header, .container>.navbar-collapse, .container>.navbar-header
+	// 	margin-right: -15px
+	// 	margin-left: -15px
+//	.flex-cont
 		//display: flex
 		//align-items: center
 		//justify-content: space-between
 		//flex-flow: row wrap
 		//align-content: center
-		.flex-center
-			flex: 1 0 auto //фиксируем размер остальных блоков, чтобы не распадались при сжатии
-			margin-top: 10px
-			margin-right: 20px
-			//margin: auto
-			a
-				margin: auto
-		.flex-center1 
-			margin-right: 20px
+		// .flex-center
+		// 	flex: 1 0 auto //фиксируем размер остальных блоков, чтобы не распадались при сжатии
+		// 	margin-top: 10px
+		// 	margin-right: 20px
+		// 	//margin: auto
+		// 	a
+		// 		margin: auto
+		// .flex-center1 
+		// 	margin-right: 20px
 		//padding: 0
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
@@ -97,13 +166,25 @@
 	/**/
 
 /* Medium Devices, Desktops */
-@media only screen and (min-width : 991px)
+@media only screen and (min-width : 992px)
+	.hidden-md, .hidden-lg
+		display: none !important
+	.nav > li
+		width: 14.7%
+		&:nth-child(5)
+			width: 16.5%
+		&:nth-child(7)
+			width: 10%
+		a:first-child  //>:nth-child(1n+2)
+			//display: block
+			//padding: 15px
+			//border-left: #ddd 1px solid
 	/**/
-	.navbar ul.nav
-		display: flex
-		float: none
-		flex-flow: row nowrap
-		justify-content: space-between
+	// .navbar ul.nav
+	// 	display: flex
+	// 	float: none
+	// 	flex-flow: row nowrap
+	// 	justify-content: space-between
 
 	/* Large Devices, Wide Screens */ 
 @media only screen and (min-width : 1200px)
