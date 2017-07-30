@@ -56,22 +56,26 @@ body
 	&:hover
 		background-color: $red
 		color: #fff
+.red_button
+	background-color: $red
+	&:hover
+		background-color: $accent
+		cursor: pointer
+
 //*********************************************
 // общие настройки флекс контейнеров
-.flex-cont, .top-menu
+.flex-cont //, .top-menu
 	display: flex
 	align-items: center
 	justify-content: space-between
 	flex-flow: row wrap
-	align-content: space-between
-	//max-width: 976px
+	align-content: center //space-between
 	margin: auto
 //*****************************************
 //<!-- блок верхней строки с сылками -->
 .top-line
 	padding: 10px 0
 	border-bottom: #ddd 1px solid
-	//max-width: 100%
 	ul
 		list-style-type: none
 		margin: 0
@@ -101,13 +105,13 @@ body
 .flex-cont //настройки основных блоков секции
 	.flex-center1 //фиксируем размер блока с логотипом чтобы не распадался при сжатии
 			flex: 0 0 auto
-			padding: 0
-			//margin-left: auto
+			padding: 5px 0
+			//margin: auto
 	.flex-center
 		flex: 0 0 auto //фиксируем размер остальных блоков, чтобы не распадались при сжатии
-		padding: 0
-		//display: flex //Это для смартфонов
-.header-contacts
+		padding: 5px 0
+		//margin: auto
+.header-contacts, .footer-contacts
 	margin-top: 20px
 	font-weight: bold
 	color: #000
@@ -118,7 +122,6 @@ body
 			margin: 0
 			margin-left: 10px
 .contacts //стилизуем блок с контактными данными
-	//margin: auto // Это для смартфонов
 	.city
 		font-size: 14px
 
@@ -136,21 +139,19 @@ body
 		&:hover
 			text-decoration: none
 			color: black
-.call
-	//margin: auto // Это для смартфонов
 //*************************************************************
-//<!-- меню сайта -->
-//savbar
-	//max-width: 976px
-
+//**********************<!-- меню сайта -->******************************
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus
 	background-color: transparent
 	
 .list-group
 	padding: 15px
+	//width: 300px
 	margin: 0
+	//text-align: right
 	a
 		text-decoration: none
+
 .nav .open > a, .nav .open > a:hover, .nav .open > a:focus
 	background-color: transparent
 		
@@ -163,16 +164,13 @@ body
 	.navbar-collapse
 		padding: 0
 .navbar-default .navbar-nav > li a:first-child
-	//padding: 18px
 	span
-		//display: inline-block
 		color: #000
 		font-size: 12px
 		font-weight: bold
 		text-transform: uppercase
 		text-decoration: none
 		border-bottom: #b4b4b4 1px solid
-		//padding: 18px
 		&:hover
 			color: $red
 			border-bottom: none
@@ -183,356 +181,82 @@ body
 		color: $red
 .fa-caret-right
 	padding-right: 5px
-
-//.top-menu
-
-//.navbar-default .navbar-collapse, .navbar-default .navbar-form
-	//margin-top: 20px
-	//background-color: #f0f0f0
-	//border-bottom: #d06368 4px solid
-	//adding: 0
-	//margin: 0
-	//margin-top: 20px
-	//width: 
-	//li
-		//flex: 1 1 130px
-		//border-left: #ddd 1px solid
-	//	padding: 18px
-		//font-weight: bold
-		//a
-		//	text-decoration: none
-		//	display: block
-		//	span
-				//font-size: 12px
-				//font-weight: bold
-				//text-transform: uppercase
-				//text-decoration: none
-				//border-bottom: #b4b4b4 1px solid
-				//color: #000
-				//padding: 0
-				//&:hover, &:active, &:visited, &:link
-			//		text-decoration: none
-			//	&:hover
-			//		color: $red
-			//		border-bottom: none
-
-		//&:first-child
-			//border-left: none
-		//&:nth-child(5)
-			//flex: 2 1 23%
-	//	&:last-child
-			//flex: 1 1 10%
-//*************************************************
-//***********Верхний слайдер******************
-
-// #slider-wrap, #slider-wrap-2 
-// 	position: relative
-// #slider-wrap .box, #slider-wrap-2 .box, #slider-wrap  .shade 
-// 	width: 100%
-// 	height: 100%
-// 	background-position: center
-// 	background-repeat: no-repeat
-// #slider-wrap .slider, #slider-wrap-2 .slider 
-// 	background-color: #2a2a2a
-// 	width: 100%
-// 	height: 324px
-// 	overflow: hidden !important
-
-// #slider-wrap .slides, #slider-wrap-2 .slides 
-// 	height: 100%
-// 	-webkit-backface-visibility: hidden
-// 	-webkit-transform-style: preserve-3d
-// 	-webkit-transition: all 500ms cubic-bezier(0.165, 0.840, 0.440, 1.000) 
-// 	-moz-transition: all 500ms cubic-bezier(0.165, 0.840, 0.440, 1.000) 
-// 	-ms-transition: all 500ms cubic-bezier(0.165, 0.840, 0.440, 1.000) 
-// 	-o-transition: all 500ms cubic-bezier(0.165, 0.840, 0.440, 1.000) 
-// 	transition: all 500ms cubic-bezier(0.165, 0.840, 0.440, 1.000)
-
-// #slider-wrap .slide, #slider-wrap-2 .slide 
-// 	height: 100%
-// 	float: left
-// 	clear: none
-// 	position: relative
-// 	height: 100%
-
-// #slider-wrap  .shade 
-// 	position: absolute
-// 	top: 0
-// 	left: 0
-// 	background: url('../img/shade.png') center no-repeat
-// 	z-index: 98
-
-// #slider-wrap .slide .slide-inner, #slider-wrap-2 .slide  .slide-inner 
-// 	top: 0
-// 	position: relative
-// 	height: 100%
-
-// #slider-wrap .slider-arrows, #slider-wrap-2 .slider-arrows 
-// 	position: absolute
-// 	top: 50%
-// 	left: 50%
-// 	height: 69px
-// 	width: 976px
-// 	z-index: 99
-// 	margin: -35px auto 0 -488px
-
-// #slider-wrap .slider-arrow, #slider-wrap-2 .slider-arrow 
-// 	position: absolute
-// 	display: block
-// 	margin-bottom: -20px
-// 	width: 44px
-// 	height: 69px
-// 	cursor: pointer
-// 	background: url('../img/slider-arrows.png') 0 0 no-repeat
-
-// #slider-wrap-2 .slider-arrow 
-// 	background: url('../img/slider-arrows-dark.png') 0 0 no-repeat
-
-// #slider-wrap .slider-arrow--left, #slider-wrap-2 .slider-arrow--left 
-// 	left: 0
-// 	background-position: 0 0
-
-// #slider-wrap .slider-arrow--left:hover, #slider-wrap-2 .slider-arrow--left:hover 
-// 	background-position: 0 -69px
-
-// #slider-wrap .slider-arrow--right, #slider-wrap-2 .slider-arrow--right 
-// 	right: 0
-// 	background-position: -50px -69px
-
-// #slider-wrap .slider-arrow--right:hover, #slider-wrap-2 .slider-arrow--right:hover 
-// 	background-position: -50px 0
-
-// #slider-wrap .slider-nav, #slider-wrap-2 .slider-nav 
-// 	background: #566a88
-// 	position: absolute
-// 	padding: 10px
-// 	cursor: pointer
-// 	z-index: 99
-
-// #slider-wrap .slider-nav__item, #slider-wrap-2 .slider-nav__item 
-// 	width: 17px
-// 	height: 17px
-// 	float: left
-// 	clear: none
-// 	display: block
-// 	margin: 0 5px
-// 	background: url('../img/slider-nav.png') 0 0 no-repeat
-
-// #slider-wrap .slider-nav__item--current, #slider-wrap-2 .slider-nav__item--current 
-// 	background-position: -20px 0
-
-// #slider-wrap .content-wrap, #slider-wrap-2 .content-wrap 
-// 	height: 100%
-// 	position: absolute
-// 	top: 0
-// 	left: 0
-// 	width: 100%
-// 	margin: 0
-// 	background-image: url('../img/slider-bg.png')
-// 	background-size: cover
-// 	-webkit-background-size: cover
-// 	-o-background-size: cover
-// 	-moz-background-size: cover
-// 	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/slider-bg.png', sizingMethod='scale')
-// 	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/slider-bg.png', sizingMethod='scale')"
-// 	background-position: center top
-// 	z-index: 98
-
-// #slider-wrap .content-wrap .wrapper 
-// 	background: url('../img/slider-head.png') repeat
-// 	color: #fff
-// 	padding: 0
-
-// #slider-wrap  .wrapper .right p 
-// 	margin-top: 0
-// 	margin-bottom: 2px
-// 	background: url('../img/slider-marker.png') 0 8px no-repeat
-// 	padding-left: 10px
-// 	font-size: 16px
-
-// #slider-wrap .wrapper .td 
-// 	padding: 20px
-// 	vertical-align: middle
-
-// #slider-wrap .wrapper .td.left 
-// 	font-size: 24px
-// 	font-weight: bold
-// 	width: 538px
-
-// #slider-wrap .wrapper .td.left a 
-// 	color: #fff
-// 	text-decoration: none
-
-// #slider-wrap .wrapper .td.left a:hover 
-// 	text-decoration: underline
-
-// #slider-wrap-2 
-// 	width: 850px
-// 	margin: 0 auto
-
-// .node-type-portfolio #slider-wrap-2 
-// 	margin: 40px auto
-
-// #slider-wrap-2 .slider 
-// 	background: none
-
-// #slider-wrap-2 .td 
-// 	height: 324px
-// 	position: relative
-
-// #slider-wrap-2 .td .button 
-// 	position: absolute
-// 	left: 50%
-// 	bottom: 66px
-// 	margin-left: -96px
-
-// #slider-wrap-2 .td p 
-// 	margin-top: 0
-// 	position: relative
-// 	font-weight: bold
-// 	font-size: 14px
-
-// #slider-wrap-2 .td p span 
-// 	position: absolute
-// 	right: 0
-// 	color: #4b6a8a
-
-
-
-
-
-
-
-// .section-slidebar
-// 	width: 100%
-// 	//height: 300px
-// 	overflow: hidden
-// 	background-color: #2a2a2a
-// 	background: url("../img/slider-bg.png") center center no-repeat, url("../img/shade.png") center center no-repeat
-// 	z-index: 199111
-// 	//opacity: .4
-// 	//div[class^="col-"]
-// 	//	padding: 0
-// 	.slide
-// 		//height: 300px
-// 		position: relative
-// 		//margin: 0 -10px
-// 		.carousel-services-content
-// 			display: flex
-// 			align-items: center
-// 			justify-content: space-around
-// 			flex: 0 0 auto
-// 			position: absolute
-// 			width: 100%
-// 			//height: 100px
-// 			padding: 20px 0
-// 			//margin: 0
-// 			color: #fff
-// 			background-color: rgba(42,42,42,.5)
-// 			max-height: 100%
-// 			h2
-// 				//position: inline
-// 				margin: 0
-// 				font-size: 32px
-// 				//padding-left: 15px
-// 				//top: 0
-// 				//bottom: 0
-// 			ul
-// 				//position: inline
-// 				font-size: 15px
-// 				//padding: 100px
-// 				//padding: 0
-// 				margin: 0
-// 				li
-// 					list-style-type: none
-// 					&:before
-// 						color: #76beff
-// 						content: '•'
-// 						padding-right: 5px
-// 						//font-size: 18px
-// 						font-weight: bolder
-// 				//li
-//     			//list-style-type: none 
-// 			   	//&:before
-// 				//    color: #76beff 
-// 				 //   content: "2" 
-// 				 //   padding-right: 10px 
-// .slider-nav
-// 	//position: absolute
-// 	//display: block
-// 	bottom: 0
-// 	//width: 190px
-// 	height: 35px
-// 	background-color: $accent
-// 	.slider-nav__item
-// 		width: 17px
-// 		height: 17px
-// 		margin: 10px 5px 5px 5px
-// 		background: url("../img/slider-item.png") 0 0 no-repeat //
-// .slider-nav__item.slider_nav_item_current
-// 	background: url("../img/slider-item2.png") 0 0 no-repeat //
-
-// .slider-arrow--right
-// 	height: 69px
-// 	width: 44px
-// 	background: url("../img/right-slide.png") 0 0 no-repeat
-// 	&:hover
-// 		opacity: .5
-// .slider-arrow--left
-// 	height: 69px
-// 	width: 44px
-// 	background: url("../img/left-slide.png") 0 0 no-repeat
-// 	&:hover
-// 		opacity: .5
-
-
-		//.owl-nav
-		//	position: absolute
-		//	top: 50%
-		//	width: 100%
-		//	>div
-		//		position: absolute
-		//		&.owl-prev
-		//			left: 0
-		//		&.owl-next
-		//			right: 0
-
-		//.carousel-services-image
-			//position: absolute
-
+//***************************************************************
+//*********************Слайдер**********************************
 .slider1
 	position: relative
-	height: 324px
+	height: 323px
 	.sl1
 		position: absolute
 		background: url(../img/slider-bg.png) center no-repeat, url(../img/shade.png) center no-repeat
 		width: 100%
+		//max-width: none !important
 		height: 100%
 		opacity: 1
 		z-index: 0
 		left: 0
 		top: 0px
 	.carousel 
-		height: 324px !important
+		height: 323px !important
 		overflow: hidden
-
+		position: relative
 	.carousel-inner 
-	 	overflow: visible
+	 	//overflow: visible
 	.carousel-inner img 
-		left: 50%
+		//left: 50%
 		max-width: none !important
-		min-height: 324px
-		min-width: 100%
-		position: absolute
-		top: 162px
-		transform: translate(-50%,-50%)
-		opacity: 1
+		//max-width: 976px
+		min-height: 323px
+		//min-width: 100%
+		position: relative
+		//top: 162px
+		//transform: translate(-50%,-50%)
+		//opacity: 1
 	.carousel-control
 		top: 40%
-		width: 50px
+		width: 0px
 		height: 0px
 		z-index: 1
-		.carousel-control.right
+		&.right
+			right: 40px
+	.carousel-indicators
+		position: absolute
+		display: flex
+		justify-content: space-around
+		align-items: center
+		background-color: $accent
+		bottom: 0
+		margin: 0
+		left: 46%
+		padding: 0
+		width: 101px
+		height: 37px
+	.caption2
+		position: absolute
+		display: flex
+		justify-content: space-around
+		align-items: center
+		z-index: 2000
+		top: 0
+		left: 0
+		margin: 0
+		padding: 0
+		min-width: 100%
+		height: 120px
+		background-color: rgba(0,0,0,.5)
+		a
+			font-size: 24px
+			font-weight: bold
+			color: #fff
+		ul
+			list-style-type: none
+			margin: 0
+			padding: 0
+			li
+				background: url("../img/slider-marker.png") 0 8px no-repeat
+				padding-left: 10px
+				font-size: 16px
+				text-align-last: left
 //**********************************************
 //<!-- блок УТП под верхним слайдером -->
 .advantages
@@ -540,19 +264,22 @@ body
 	width: 100%
 	background-color: $accent
 	color: #fff
-	padding: 20px 0
+	padding: 10px 0
 	figure
 		display: flex
 		align-items: center
+		padding: 5px 0
 		figcaption
 			padding-left: 10px
 			font-size: 16px
 			font-weight: bold
 .flex-right //добавить класс чтобы выровнять правый блок по правому краю
 	display: flex
+	//flex: 0 1 190px
 	margin-left: auto
 .flex-center-advantages
 	display: flex
+	//flex: 0 1 170px
 	// margin: auto если надо выровнять "мы обеспечиваем рост продаж по центру"
 //***************************************************
 //<!-- блок Эффективное продвижение сайта со вторым слайдером -->
@@ -568,18 +295,60 @@ body
 		text-decoration: underline
 //*************************************************
 //<!-- второй слайдер -->
-.carousel-two
-	.carousel-services-item
+.effect-prod-site .slider2
+	height: 324px
+	.carousel-control
+		top: 40%
+		width: 0px
+		height: 0
+		&.right
+			right: 40px
+	.carousel-indicators
 		display: flex
-		align-items: center
 		justify-content: space-around
-		.carousel-services-image
-			display: inline-block
-		.carousel-services-content
-			display: inline-block
-			table tr td 
-				padding: 5px
-				margin: 0 10px 0 10px
+		align-items: center
+		background-color: $accent
+		bottom: 0
+		margin: 0
+		left: 46%
+		width: 101px
+		height: 37px
+	.slide-sod
+		width: 90%
+		margin: 0 auto
+		display: flex
+		justify-content: space-between
+		flex: 1 1 auto
+		height: 324px
+		.img_slider
+			width: 49%
+			height: auto
+		.content
+			flex: 1 1 auto
+			table
+				margin-bottom: 10px
+				width: 100%
+				height: 70%
+				font-weight: bold
+				td:nth-child(2n)
+					text-align: right
+					color: $accent
+			.my_button
+				margin: 0 auto
+	.fa-chevron-left, .fa-chevron-right
+		color: #cccbcb
+		&:hover
+			color: #000
+.carousel-indicators li
+	width: 17px
+	height: 17px
+	border: none
+	background: url("../img/slider-item.png") 0 0 no-repeat
+.carousel-indicators .active
+	background: url("../img/slider-item2.png") 0 0 no-repeat
+	width: 17px
+	height: 17px
+		//float:left
 //**********************************
 //<!-- блок Создание и продвижение сайта -->
 .create-and-prod
@@ -595,20 +364,26 @@ body
 		dd
 			margin-left: 23px
 			margin-bottom: 30px
-	.my_button
-		display: inline-block
-		background-color: $red
-		margin-left: 16px
-		&:hover
-			background-color: $accent
-	strong
-		display: inline-block
-		margin-left: 15px
-		a
-			color: $accent
+	.footer
+		text-align: center
+		background-color: #f0f0f0
+		padding-bottom: 10px
+		.my_button
+			display: inline-block
+			background-color: $red
+			margin-left: 16px
 			&:hover
-				color: $red
-				text-decoration: none
+				background-color: $accent
+				color: #fff
+		strong
+			display: inline-block
+			margin-left: 15px
+			a
+				color: $accent
+				&:hover
+					color: $red
+					text-decoration: none
+
 //*******************************************
 //<!-- Мы предоставляем следующие услуги -->
 .uslugi div[class^="col-"]:nth-child(2) .uslugi-item
@@ -628,10 +403,10 @@ body
 		background-image: url("../img/uslugi-6.png")
 .uslugi
 	width: 100%
-	background-color: #4b6a8a //url('../img/uslugi-bg.png') center no-repeat
-	background-image: url("../img/bg-slider-left-bottom.png"), url("../img/bg-slider-right-bottom.png")
-	background-position: left center, right center
-	background-repeat: no-repeat
+	//background-color: #4b6a8a //url('../img/uslugi-bg.png') center no-repeat
+	background: #4b6a8a url('../img/index-block.png') center no-repeat //url("../img/bg-slider-left-bottom.png"), url("../img/bg-slider-right-bottom.png")
+	//background-position: left center, right center
+	//background-repeat: no-repeat
 	h2
 		text-align: center
 		color: #fff
@@ -696,16 +471,16 @@ body
 		margin: 0
 		font-size: 24px
 	.preimushestvo-item
-		background-color: #566a88
+		background-color: $accent //#566a88
 		text-align: center
 		margin: 15px 0
-		//height: 340px
+		height: 320px
 		.number
 			//display: inline-block
 			position: absolute
 			width: 60px
 			height: 60px
-			color: #566a88
+			color: $accent
 			background-color: #FFF 
 			border-radius: 50%
 			font-size: 40px
@@ -717,39 +492,70 @@ body
 			font-size: 15px
 			font-weight: bold
 			text-transform: uppercase
-			padding: 50px 30px 0 30px
+			padding: 50px 10px 0 30px
+			//padding-top: 50px
 		.tire
+			width: 50px
+			height: 5px
+			background-color: #FFF
+			margin: 10px auto
 			//display: inline
-			color: #fff
-			font-size: 50px
+			//color: #fff
+			//font-size: 50px
 			//margin: 0
-			margin-top: -25px	
+			//margin-top: -25px	
 		p
+			//display: block
 			line-height: 1.8
 			color: #fff
-			padding: 0 30px 30px 30px
-			margin-top: -20px
-			height: 220px
-			overflow: hidden
+			padding: 0 30px 0 30px
+			margin: 0
+			//margin-top: -20px
+			//height: 220px
+			//overflow: hidden
 		
 //*************************************************	
 //<!-- меню футера -->
-.footer-contacts .header-contacts .flex-cont 
-	color: #000
-	.flex-center:nth-child(2)
-		margin-left: auto
-	
-	//font-weight: bold
-	//outline: 1px solid red
+
 .footer
-	width: 100%
-	background-color: #2a2a2a	
-	.top-menu
-		background-color: #2a2a2a
-		border-bottom: none
-		a
-			color: #fff
-			&:hover
-				color: #74d7f0
+	background-color: #2a2a2a
+	.title
+		color: #74d7f0
+		border-bottom: #fff 4px solid
+		text-transform: uppercase
+		font-weight: bold
+		text-align: center
+		padding-bottom: 8px
+		margin-bottom: 10px
+		font-size: 16px
+		font-family: 'Arial'
+	p
+		margin-top: 0
+		margin-bottom: 5px
+	a
+		color: #fff
+		text-decoration: underline
+		cursor: auto
+		font-size: 16px
+		&:hover
+			text-decoration: none
+			color: #74d7f0
+// .footer-contacts .header-contacts .flex-cont 
+// 	color: #000
+// 	.flex-center:nth-child(2)
+// 		margin-left: auto
+	
+// 	//font-weight: bold
+// 	//outline: 1px solid red
+// .footer
+// 	width: 100%
+// 	background-color: #2a2a2a	
+// 	.top-menu
+// 		background-color: #2a2a2a
+// 		border-bottom: none
+// 		a
+// 			color: #fff
+// 			&:hover
+// 				color: #74d7f0
 
 @import "media" // Всегда в конце

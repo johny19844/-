@@ -28,7 +28,7 @@
 		border: none
 		z-index: 0
 		text-align: center
-	
+		transition: all 5s
 		// text-align: right
 		// padding-right: 30%
 		// background-color: white
@@ -37,8 +37,8 @@
 	// 	text-align: right
 	// 	padding-right: 30%
 	.navbar-nav > li
-
-		//border-bottom: #b4b4b4 1px solid
+		border-bottom: #b4b4b4 1px solid
+		background-color: #FFF
 	.navbar-default .navbar-nav > li a:first-child span
 		border-bottom: none
 
@@ -48,11 +48,15 @@
 		padding-left: 0
 		padding-right: 0
 		padding-bottom: 0
+	.nav li div.list-group.open
+		width: 100%
+		text-align: center
 	.navbar-nav > li > a:hover
 		text-decoration: none
 	.navbar-nav .open .dropdown-menu //Нижний уровеь меню
 		background-color: #f0f0f0
-		padding-left: 25%
+		padding-left: 20%
+		//text-align: center
 		margin-top: 15px
 		//position: absolute
 		li
@@ -60,7 +64,8 @@
 			//background-color: #f0f0f0
 			text-align: left
 			//padding-left: 25%
-			border-bottom: none
+			//border-bottom: none
+			//border-bottom: #b4b4b4 1px solid
 			margin: 0 0
 	.navbar-default .navbar-nav .open .dropdown-menu > li > a //Нижний уровеь меню
 		color: #2f5792
@@ -72,77 +77,86 @@
 			//padding-top: 0
 	.nav li .list-group //Верхний уровеь меню
 		//display: block
-		border-bottom: #b4b4b4 1px solid
+		//border-bottom: #b4b4b4 1px solid
 		//margin: 0
-		text-align: center
+		text-align: right
+		width: 290px
+		margin: 0 auto
 		//padding-right: 30%
 		background-color: white
 		//margin-bottom: 15px
-
-	// .navbar-header 
-	// 	float: none
-
-	// .navbar-left,.navbar-right 
-	// 	float: none !important
-
-	// .navbar-toggle 
-	// 	display: block
-
-	// .navbar-collapse 
-	// 	border-top: 1px solid transparent
-	// 	box-shadow: inset 0 1px 0 rgba(255,255,255,0.1)
-
-	// .navbar-fixed-top 
-	// 	top: 0
-	// 	border-width: 0 0 1px
-
-	// .navbar-collapse.collapse 
-	// 	display: none!important
-
-	// .navbar-nav 
-	// 	float: none!important
-	// 	margin-top: 7.5px
-
-	// .navbar-nav>li 
-	// 	float: none
-	// 	text-align: center !important
-
-	// .navbar-nav>li>a
-	// 	padding-top: 10px
-	// 	padding-bottom: 10px
-
-	// .collapse.in
-	// 	display:block !important
-	// 	text-align: center !important
-
-	// .container-fluid>.navbar-collapse, .container-fluid>.navbar-header, .container>.navbar-collapse, .container>.navbar-header
-	// 	margin-right: -15px
-	// 	margin-left: -15px
-//	.flex-cont
-		//display: flex
-		//align-items: center
-		//justify-content: space-between
-		//flex-flow: row wrap
-		//align-content: center
-		// .flex-center
-		// 	flex: 1 0 auto //фиксируем размер остальных блоков, чтобы не распадались при сжатии
-		// 	margin-top: 10px
-		// 	margin-right: 20px
-		// 	//margin: auto
-		// 	a
-		// 		margin: auto
-		// .flex-center1 
-		// 	margin-right: 20px
-		//padding: 0
+	.preimushestvo .preimushestvo-item
+		height: 270px
+		.number
+			left: 43%
+	.header-contacts .flex-center1, .header-contacts .flex-center
+		margin: auto
+	//.advantages .flex-right
+	//	display: flex
+	//	margin-left: auto
 /* Small Devices, Tablets */
-@media only screen and (max-width : 768px)
+@media only screen and (max-width : 767px)
 	/**/
+	.footer-contacts .flex-center1, .footer-contacts .flex-center, .footer .flex-center
+		margin: auto
+		padding: 5px
+	.top-line
+		text-align: center
+		.social
+			text-align: center
+	.slider1 .carousel-indicators, .effect-prod-site .slider2 .carousel-indicators
+		left: 43%
+	.preimushestvo .preimushestvo-item
+		height: 230px
+		.number
+			left: 45%
+	.uslugi .uslugi-item
+			p
+				height: 100px
+	.advantages
+		//position: absolute
+		//width: 100%
+		//background-color: $accent
+		//color: #fff
+		//padding: 20px 0
+		figure
+			display: flex
+			align-items: center
+			padding: 5px 0
+			flex: 0 0 auto
+			margin: auto
+			//text-align: center
+			figcaption
+				padding-left: 10px
+				font-size: 16px
+				font-weight: bold
+		.flex-right //добавить класс чтобы выровнять правый блок по правому краю
+			display: flex
+			flex: 0 0 290px
+			margin: auto
+			//padding-top: 20px
+		.flex-center-advantages
+			display: flex
+			flex: 0 0 290px
+			margin: auto
+			padding-bottom: 20px
+//	.create-and-prod 
+//		.footer
+//			text-align: center
+//			background-color: #f0f0f0
+//			padding-bottom: 10px
 
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
 	/**/
-
+	.preimushestvo .preimushestvo-item
+		height: 290px
+		.number
+			left: 41%
+	.uslugi .uslugi-item
+			p
+				height: 150px
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)

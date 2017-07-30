@@ -1,11 +1,11 @@
 $(function() {
-	 $('.slider').glide({
-	 	autoplay: false,
-	 	hoverpause: true,
-	 	arrowRightText: '',
-	 	arrowLeftText: '',
-	 	navCurrentItemClass: 'slider_nav_item_current'
-	 });
+	 // $('.slider').glide({
+	 // 	autoplay: false,
+	 // 	hoverpause: true,
+	 // 	arrowRightText: '',
+	 // 	arrowLeftText: '',
+	 // 	navCurrentItemClass: 'slider_nav_item_current'
+	 // });
 
 
 //	$('.owl-carousel').owlCarousel({
