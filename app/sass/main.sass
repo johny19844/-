@@ -39,6 +39,10 @@ body
 //**************************************************
 .container
 	padding: 0
+.jirn
+	display: inline
+	font-weight: bold
+
 // Обшая темя для кнопок
 .my_button
 	display: block
@@ -104,13 +108,11 @@ body
 //<!-- блок с логотипом и контактами -->
 .flex-cont //настройки основных блоков секции
 	.flex-center1 //фиксируем размер блока с логотипом чтобы не распадался при сжатии
-			flex: 0 0 auto
-			padding: 5px 0
-			//margin: auto
+		flex: 0 1 auto
+		padding: 5px 0
 	.flex-center
 		flex: 0 0 auto //фиксируем размер остальных блоков, чтобы не распадались при сжатии
 		padding: 5px 0
-		//margin: auto
 .header-contacts, .footer-contacts
 	margin-top: 20px
 	font-weight: bold
@@ -118,13 +120,14 @@ body
 	.logo
 		display: flex
 		align-items: center
+		flex-flow: row wrap
 		.text_logo
 			margin: 0
 			margin-left: 10px
+
 .contacts //стилизуем блок с контактными данными
 	.city
 		font-size: 14px
-
 	.phone
 		span
 			font-size: 18px
@@ -146,9 +149,7 @@ body
 	
 .list-group
 	padding: 15px
-	//width: 300px
 	margin: 0
-	//text-align: right
 	a
 		text-decoration: none
 
@@ -186,14 +187,13 @@ body
 .slider1
 	position: relative
 	height: 323px
-	.sl1
+	div.sl1
 		position: absolute
 		background: url(../img/slider-bg.png) center no-repeat, url(../img/shade.png) center no-repeat
 		width: 100%
-		//max-width: none !important
 		height: 100%
-		opacity: 1
-		z-index: 0
+		//opacity: 1
+		z-index: 1
 		left: 0
 		top: 0px
 	.carousel 
@@ -201,10 +201,17 @@ body
 		overflow: hidden
 		position: relative
 	.carousel-inner 
-	 	//overflow: visible
+		//overflow: visible
+	.box
+	 	min-height: 323px
+	 	position: relative
+	 	background-position: center
+	 	//z-index: 0
+	 	.container
+	 		//height: 323px
 	.carousel-inner img 
 		//left: 50%
-		max-width: none !important
+		//max-width: none !important
 		//max-width: 976px
 		min-height: 323px
 		//min-width: 100%
@@ -216,7 +223,7 @@ body
 		top: 40%
 		width: 0px
 		height: 0px
-		z-index: 1
+		//z-index: 1
 		&.right
 			right: 40px
 	.carousel-indicators
@@ -232,35 +239,39 @@ body
 		width: 101px
 		height: 37px
 	.caption2
-		position: absolute
+		//position: absolute
+		max-width: 976px
 		display: flex
 		justify-content: space-around
 		align-items: center
-		z-index: 2000
+		z-index: 2
 		top: 0
+		bottom: auto
 		left: 0
+		right: auto
 		margin: 0
 		padding: 0
-		min-width: 100%
-		height: 120px
+		width: 100%
+		//height: 120px
 		background-color: rgba(0,0,0,.5)
 		a
 			font-size: 24px
 			font-weight: bold
 			color: #fff
+			padding: 10px 0
 		ul
 			list-style-type: none
 			margin: 0
-			padding: 0
+			padding: 10px 0
 			li
 				background: url("../img/slider-marker.png") 0 8px no-repeat
 				padding-left: 10px
+				//text-indent: 0
 				font-size: 16px
 				text-align-last: left
 //**********************************************
 //<!-- блок УТП под верхним слайдером -->
 .advantages
-	//position: absolute
 	width: 100%
 	background-color: $accent
 	color: #fff
@@ -275,11 +286,9 @@ body
 			font-weight: bold
 .flex-right //добавить класс чтобы выровнять правый блок по правому краю
 	display: flex
-	//flex: 0 1 190px
 	margin-left: auto
 .flex-center-advantages
 	display: flex
-	//flex: 0 1 170px
 	// margin: auto если надо выровнять "мы обеспечиваем рост продаж по центру"
 //***************************************************
 //<!-- блок Эффективное продвижение сайта со вторым слайдером -->
@@ -348,7 +357,6 @@ body
 	background: url("../img/slider-item2.png") 0 0 no-repeat
 	width: 17px
 	height: 17px
-		//float:left
 //**********************************
 //<!-- блок Создание и продвижение сайта -->
 .create-and-prod
@@ -364,7 +372,7 @@ body
 		dd
 			margin-left: 23px
 			margin-bottom: 30px
-	.footer
+	.footer1
 		text-align: center
 		background-color: #f0f0f0
 		padding-bottom: 10px
@@ -375,7 +383,7 @@ body
 			&:hover
 				background-color: $accent
 				color: #fff
-		strong
+		.jirn
 			display: inline-block
 			margin-left: 15px
 			a
@@ -403,10 +411,7 @@ body
 		background-image: url("../img/uslugi-6.png")
 .uslugi
 	width: 100%
-	//background-color: #4b6a8a //url('../img/uslugi-bg.png') center no-repeat
 	background: #4b6a8a url('../img/index-block.png') center no-repeat //url("../img/bg-slider-left-bottom.png"), url("../img/bg-slider-right-bottom.png")
-	//background-position: left center, right center
-	//background-repeat: no-repeat
 	h2
 		text-align: center
 		color: #fff
@@ -417,9 +422,7 @@ body
 		background-color: #FFF
 		margin: 10px 0
 		font-size: 14px
-		//height: 360px
 		.header
-			//padding-top: 15px
 			font-size: 20px
 			font-weight: bold
 			text-decoration: underline
@@ -439,11 +442,10 @@ body
 			justify-content: space-between
 			padding: 20px 0
 			&:before, &:after //добавдяем синие кружочки по бокам ценника
-				//position: relative
 				content: '\25D1'
 				color: #4b6a8a
 				font-size: 30px
-				margin: -14px
+				margin: -15px
 			&:after
 				content: '\25D0'
 		.cena
@@ -476,7 +478,6 @@ body
 		margin: 15px 0
 		height: 320px
 		.number
-			//display: inline-block
 			position: absolute
 			width: 60px
 			height: 60px
@@ -493,26 +494,16 @@ body
 			font-weight: bold
 			text-transform: uppercase
 			padding: 50px 10px 0 30px
-			//padding-top: 50px
 		.tire
 			width: 50px
 			height: 5px
 			background-color: #FFF
 			margin: 10px auto
-			//display: inline
-			//color: #fff
-			//font-size: 50px
-			//margin: 0
-			//margin-top: -25px	
 		p
-			//display: block
 			line-height: 1.8
 			color: #fff
 			padding: 0 30px 0 30px
 			margin: 0
-			//margin-top: -20px
-			//height: 220px
-			//overflow: hidden
 		
 //*************************************************	
 //<!-- меню футера -->
@@ -540,22 +531,5 @@ body
 		&:hover
 			text-decoration: none
 			color: #74d7f0
-// .footer-contacts .header-contacts .flex-cont 
-// 	color: #000
-// 	.flex-center:nth-child(2)
-// 		margin-left: auto
-	
-// 	//font-weight: bold
-// 	//outline: 1px solid red
-// .footer
-// 	width: 100%
-// 	background-color: #2a2a2a	
-// 	.top-menu
-// 		background-color: #2a2a2a
-// 		border-bottom: none
-// 		a
-// 			color: #fff
-// 			&:hover
-// 				color: #74d7f0
 
 @import "media" // Всегда в конце
