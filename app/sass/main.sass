@@ -114,7 +114,7 @@ body
 		flex: 0 0 auto //фиксируем размер остальных блоков, чтобы не распадались при сжатии
 		padding: 5px 0
 .header-contacts, .footer-contacts
-	margin-top: 20px
+	//margin-top: 20px
 	font-weight: bold
 	color: #000
 	.logo
@@ -124,6 +124,10 @@ body
 		.text_logo
 			margin: 0
 			margin-left: 10px
+		.logo2
+			width: 214px
+			height: 53px
+			//margin: auto
 
 .contacts //стилизуем блок с контактными данными
 	.city
@@ -203,12 +207,15 @@ body
 	.carousel-inner 
 		//overflow: visible
 	.box
-	 	min-height: 323px
-	 	position: relative
-	 	background-position: center
-	 	//z-index: 0
-	 	.container
-	 		//height: 323px
+		min-height: 323px
+		max-width: 100%
+		position: relative
+		background-position: center
+		.container
+			position: relative
+			height: 323px
+			max-width: 976px
+			margin: 0 auto
 	.carousel-inner img 
 		//left: 50%
 		//max-width: none !important
@@ -220,10 +227,10 @@ body
 		//transform: translate(-50%,-50%)
 		//opacity: 1
 	.carousel-control
-		top: 40%
+		//top: 40%
 		width: 0px
 		height: 0px
-		//z-index: 1
+		z-index: 5000
 		&.right
 			right: 40px
 	.carousel-indicators
@@ -239,20 +246,16 @@ body
 		width: 101px
 		height: 37px
 	.caption2
-		//position: absolute
-		max-width: 976px
+		position: absolute
 		display: flex
 		justify-content: space-around
 		align-items: center
-		z-index: 2
+		z-index: 2000
 		top: 0
 		bottom: auto
-		left: 0
-		right: auto
-		margin: 0
-		padding: 0
 		width: 100%
-		//height: 120px
+		left: 0
+		padding: 0
 		background-color: rgba(0,0,0,.5)
 		a
 			font-size: 24px
@@ -269,6 +272,15 @@ body
 				//text-indent: 0
 				font-size: 16px
 				text-align-last: left
+#carousel-example-generic > .container
+	position: absolute
+	height: 50px
+	left: 50%
+	top: 50%
+	max-width: 976px
+	z-index: 100
+	//margin: 0 auto 0 15%;
+	margin: -35px auto 0 -488px
 //**********************************************
 //<!-- блок УТП под верхним слайдером -->
 .advantages
@@ -330,8 +342,8 @@ body
 		flex: 1 1 auto
 		height: 324px
 		.img_slider
-			width: 49%
-			height: auto
+			max-width: 49%
+			//height: auto
 		.content
 			flex: 1 1 auto
 			table
@@ -442,12 +454,13 @@ body
 			justify-content: space-between
 			padding: 20px 0
 			&:before, &:after //добавдяем синие кружочки по бокам ценника
-				content: '\25D1'
-				color: #4b6a8a
-				font-size: 30px
-				margin: -15px
-			&:after
-				content: '\25D0'
+				content: ''
+				width: 10px
+				height: 15px
+				background-color: #4b6a8a
+				border-radius: 15px 0 0 15px
+			&:before
+				border-radius: 0 15px 15px 0
 		.cena
 			font-size: 20px
 			font-weight: bold

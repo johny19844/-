@@ -11,6 +11,9 @@
 @media only screen and (max-width : 991px)
 	.container //резиновый контейнер
 		width: 100%	
+	#carousel-example-generic > .container
+		left: 0%
+		margin: auto
 	.navbar-nav
 		margin: 0
 	.dropdown-menu //настройки выпадающего меню
@@ -112,7 +115,12 @@
 			flex: 0 0 290px
 			margin: auto
 			padding-bottom: 20px
-
+	
+	#carousel-example-generic .caption2 a
+		font-size: 18px
+	#carousel-example-generic .caption2 ul li
+	 	font-size: 12px
+  
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
 	/**/
@@ -125,14 +133,21 @@
 			p
 				height: 150px
 	.flex-center1 .logo
-		img
-			max-width: none !important
-			width: 200px
-			overflow: auto
+		.logo2
+			width: 210px
+			overflow: hidden
 			margin: auto
-.header-contacts .logo .text_logo, .footer-contacts .logo .text_logo
-	margin: auto
-	padding-top: 5px
+		// img
+		// 	max-width: none !important
+		// 	width: 200px
+		// 	overflow: auto
+		// 	margin: auto
+	.header-contacts .logo .text_logo, .footer-contacts .logo .text_logo
+		margin: auto
+		padding-top: 5px
+		padding-left: 5px
+	.effect-prod-site .slider2 .slide-sod .content table
+	 	font-size: 12px
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
